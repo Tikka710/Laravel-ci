@@ -5,7 +5,7 @@
 @section('content')
 　@include('nav')
  <div class="container">
-   <div class="d-flex p-2 bd-highlight">
+   <div class="d-flex p-3 bd-highlight">
      <h3>新着雑学</h3>
    </div>
    <hr>
@@ -14,6 +14,7 @@
 
    @include('articles.card')
    @endforeach
+
  </div>
 
- @endsection
+@endsection
