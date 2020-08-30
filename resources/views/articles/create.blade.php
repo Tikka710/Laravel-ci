@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', '記事投稿')
+@section('title', '雑学投稿')
 
 @include('nav')
 
@@ -16,7 +16,7 @@
           <div class="card-text">
             <form method="POST" action="{{ route('articles.store') }}">
               @include('articles.form')
-              <button type="submit" class="btn btn-outline-success btn-block">投稿する</button>
+              <button type="submit" class="btn btn-outline-warning btn-block">投稿する</button>
             </form>
           </div>
         </div>
