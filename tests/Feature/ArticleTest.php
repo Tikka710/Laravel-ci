@@ -40,6 +40,6 @@ class ArticleTest extends TestCase
      $article->likes()->attach($another);
      $result = $article->isLikedBy($user);
 
-     $this->assertFalse($result); 
+     $this->assertFalse($result);
    }
 }
