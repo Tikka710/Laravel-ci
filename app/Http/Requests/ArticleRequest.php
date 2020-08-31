@@ -25,7 +25,8 @@ class ArticleRequest extends FormRequest
     {
         return [
             'title' => 'required|max:50',
-            'body' => 'required|max:200',
+            'body' => 'required|max:145',
+            'tags' => 'json|regex:/^(?!.*\s).+$/u|regex:/^(?!.*\/).*$/u',
         ];
     }
     public function attributes()
@@ -33,6 +34,16 @@ class ArticleRequest extends FormRequest
        return [
            'title' => 'タイトル',
            'body' => '本文',
+           'tags' => 'タグ',
        ];
    }
+
+   public function passedValidation()
+    {
+        $this->tags = collect(json_decode($this->tags))
+            ->slice(0, 3)
+            ->map(function ($requestTag) {
+                return $requestTag->text;
+            });
+    }
 }

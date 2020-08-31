@@ -6,7 +6,7 @@ use App\Article;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ArtclePolicy
+class ArticlePolicy
 {
     use HandlesAuthorization;
 
@@ -39,10 +39,10 @@ class ArtclePolicy
      * @param  \App\User  $user
      * @return mixed
      */
-    public function create(User $user)
-    {
-        return true;
-    }
+     public function create(User $user)
+     {
+         return true; //-- この行を変更
+     }
 
     /**
      * Determine whether the user can update the article.
@@ -51,10 +51,10 @@ class ArtclePolicy
      * @param  \App\Article  $article
      * @return mixed
      */
-    public function update(User $user, Article $article)
-    {
-        return $user->id === $article->user_id;
-    }
+     public function update(User $user, Article $article)
+     {
+         return $user->id === $article->user_id;
+     }
 
     /**
      * Determine whether the user can delete the article.
@@ -63,10 +63,10 @@ class ArtclePolicy
      * @param  \App\Article  $article
      * @return mixed
      */
-    public function delete(User $user, Article $article)
-    {
-        return $user->id === $article->user_id;
-    }
+     public function delete(User $user, Article $article)
+     {
+         return $user->id === $article->user_id;
+     }
 
     /**
      * Determine whether the user can restore the article.
