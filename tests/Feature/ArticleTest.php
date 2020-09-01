@@ -22,24 +22,25 @@ class ArticleTest extends TestCase
     }
 
     public function testIsLikedByTheUser()
-   {
-       $article = factory(Article::class)->create();
-       $user = factory(User::class)->create();
-       $article->likes()->attach($user);
+    {
+        $article = factory(Article::class)->create();
+        $user = factory(User::class)->create();
+        $article->likes()->attach($user);
 
-       $result = $article->isLikedBy($user);
+        $result = $article->isLikedBy($user);
 
-       $this->assertTrue($result);
-   }
+        $this->assertTrue($result);
+    }
 
    public function testIsLikedByAnother()
    {
-     $article = factory(Article::class)->create();
-     $user = factory(User::class)->create();
-     $another = factory(User::class)->create();
-     $article->likes()->attach($another);
-     $result = $article->isLikedBy($user);
+       $article = factory(Article::class)->create();
+       $user = factory(User::class)->create();
+       $another = factory(User::class)->create();
+       $article->likes()->attach($another);
 
-     $this->assertFalse($result);
+       $result = $article->isLikedBy($user);
+
+       $this->assertFalse($result);
    }
 }

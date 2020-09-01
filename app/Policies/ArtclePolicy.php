@@ -41,7 +41,7 @@ class ArticlePolicy
      */
      public function create(User $user)
      {
-         return true; //-- この行を変更
+         return true; 
      }
 
     /**
