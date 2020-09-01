@@ -19,7 +19,6 @@
 
 <script>
 import VueTagsInput from '@johmun/vue-tags-input';
-
 export default {
   components: {
     VueTagsInput,
@@ -34,7 +33,6 @@ export default {
         default: [],
       },
     },
-
   data() {
     return {
       tag: '',
