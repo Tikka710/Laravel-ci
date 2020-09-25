@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light navbar-dark orange lighten-4">
 
- <a class="navbar-brand" href="/"><img src="{{ secure_asset('/images/logo.png') }}" class="logo mr-1" width="100" height="50">
+ <a class="navbar-brand" href="/"><img src="{{ secure_asset('/images/zatu.png') }}" class="logo mr-1" width="100" height="50">
    <p class="float-right text-muted h6 mt-3">知識が集まる場所</p>
  </a>
 
