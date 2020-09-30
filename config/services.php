@@ -31,9 +31,9 @@ return [
     ],
 
     'google' => [
-       'client_id' => env('GOOGLE_CLIENT_ID'),
-       'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-       'redirect' => env('APP_URL') . '/login/google/callback',
+       'client_id' => '58497995889-1n2obptaumfk0duoc87a5opu5k2uosrl.apps.googleusercontent.com',
+       'client_secret' => 'wXGrnT_1nLwTxhb46VfXT0uw',
+       'redirect' => 'https://zatubako.com',
    ],
 
 
