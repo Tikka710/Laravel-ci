@@ -4,7 +4,7 @@
 
 @section('content')
 　@include('nav')
- <div class="container">
+ <div class="container-fluid">
    <div class="d-flex p-3 bd-highlight">
      <h3>新着雑学</h3>
    </div>
