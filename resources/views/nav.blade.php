@@ -5,7 +5,9 @@
  </a>
 
 <ul class="navbar-nav ml-auto">
- @include('form')
+   <div class="col-md-3 hidden-sm hidden-xs">
+     @include('form')
+   </div>
 </ul>
 <!-- Hunberger -->
 

@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="drawer--right">
+<body>
   <div id="app">
     @yield('content')
   </div>
