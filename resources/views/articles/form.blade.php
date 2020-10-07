@@ -1,7 +1,7 @@
 @csrf
 
 <div class="md-form">
-  <label>タイトル</label>
+  <label>タイトル(50)</label>
   <input type="text" name="title" class="form-control" required value="{{ $article->title ?? old('title') }}" placeholder="雑学のタイトルを入力してください(必須)">
 </div>
 <div class="form-group">
