@@ -11,11 +11,11 @@
         <a href="{{ route('articles.about') }}">ザツバコとは</a>
       </button>
   </div>
+  <hr>
    <div class="text-center p-2 bd-highlight">
      <h3>新着雑学</h3>
    </div>
-<hr>
-   <div class="col-md">
+   <div class="col mx-auto" style="width: 40rem">
     @foreach($articles as $article)
 
 

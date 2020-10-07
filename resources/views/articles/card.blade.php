@@ -1,5 +1,5 @@
-<div class="card mt-3 mx-auto border-warning" style="width: 40rem">
-  <div class="card-body d-flex flex-row">
+<div class="card mt-3 border-warning" style="max-width">
+  <div class="card-body card-body-cascade d-flex flex-row">
     <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
      <i class="far fa-user-circle fa-2x mr-1"></i>
      </a>
