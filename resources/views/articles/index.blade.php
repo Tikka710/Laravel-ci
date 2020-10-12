@@ -23,7 +23,12 @@
     @endforeach
   </div>
 
+    <div class="mx-auto p-2">
+      {{ $articles->links() }}
+    </div>
+
  </div>
 </div>
+@include('footer')
 
 @endsection
