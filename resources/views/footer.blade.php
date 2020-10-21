@@ -7,7 +7,7 @@
         </a>
       </li>
     </ul>
-    <div class="footer-copyright text-center py-3">© 2020 Copyright
+    <div class="footer-copyright text-center py-3">© 2020 Tiika
     </div>
   </div>
 </footer>
