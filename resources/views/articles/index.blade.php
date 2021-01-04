@@ -29,7 +29,7 @@
         </div>
       
         <div class="text-center p-2">
-          {{ $articles->links() }}
+          
         </div>
       </div>
       
