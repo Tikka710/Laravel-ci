@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Comment;
 use App\Tag;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
 

@@ -48,4 +48,25 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+
+    /**
+     * 例外の型を変換する
+     */
+    protected function prepareException(Exception $e)
+    {
+        // これを追加
+        if( $e instanceof \Illuminate\Auth\Access\AuthorizationException ) {
+            $e = new \Illuminate\Auth\Access\AuthorizationException(
+                '許可されていません',
+                $e->getCode(),
+                $e // $eがもともと持っていた情報を失わないように引き継ぐ
+            );
+        }
+
+        // ↑ あえてデフォルトの動作の前に実行する
+        $e = parent::prepareException($e);
+
+        return $e;
+    }
+
 }
