@@ -13,6 +13,5 @@
 <div class="form-group">
 
   <label></label>
-  <block-editor></block-editor>
 　　<textarea name="body" required class="form-control" rows="6" placeholder="説明を入力してください">{{ $article->body ?? old('body') }}</textarea>
 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Comment;
 use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
@@ -20,7 +21,6 @@ class ArticleController extends Controller
       $articles = Article::with(['user', 'likes', 'tags'])
         ->orderByDesc('created_at')
         ->paginate(5);
-
 
         return view('articles.index', ['articles' => $articles]);
     }
@@ -86,9 +86,15 @@ class ArticleController extends Controller
         return redirect()->route('articles.index');
     }
 
-    public function show(Article $article)
+    public function show(Article $article, Comment $comment)
     {
-        return view('articles.show', ['article' => $article]);
+        $comments = $article->comments()
+        ->orderBy('created_at', 'desc')
+        ->paginate(5);
+        return view('articles.show', [
+          'article' => $article,
+          'comments' => $comments,
+          ]);
     }
 
     public function like(Request $request, Article $article)

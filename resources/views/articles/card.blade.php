@@ -80,7 +80,12 @@
       >
       </article-like>
     </div>
+    <div class="mr-3 d-flex align-items-center">
+      <a class="in-link p-1" href="{{ route('articles.show', ['article' => $article]) }}"><i class="far fa-comment fa-fw fa-lg"></i></a>
+      <p class="mb-0">{{ count($article->comments) }}</p>
+    </div>
   </div>
+ 
 
   @foreach($article->tags as $tag)
    @if($loop->first)

@@ -6,6 +6,7 @@
           <i class="far fa-user-circle fa-3x"></i>
         </a>
       </div>
+      <div class="col-5 text-center pr-0">
       @if( Auth::id() !== $user->id )
         <follow-button
           class="ml-auto"
@@ -14,7 +15,9 @@
           endpoint="{{ route('users.follow', ['name' => $user->name]) }}"
         >
         </follow-button>
+ 
       @endif
+      </div>
     </div>
     <h2 class="h5 card-title mr-auto">
       <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">

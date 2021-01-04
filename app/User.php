@@ -21,7 +21,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'user_id'
+        'name', 'email', 'password', 'user_id', 'self_introduction',
     ];
 
     /**
@@ -47,13 +47,10 @@ class User extends Authenticatable
        $this->notify(new PasswordResetNotification($token, new BareMail()));
     }
 
-    public function articles(): HasMany
+    public function articles(): Hasmany
     {
         return $this->hasMany('App\Article');
-
     }
-
-
 
     public function followers(): BelongsToMany
    {
@@ -86,4 +83,5 @@ class User extends Authenticatable
    {
        return $this->followings->count();
    }
+
 }
