@@ -41,6 +41,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    protected function authenticated(Request $request)
+    {
+        // フラッシュメッセージを表示
+        session()->flash('flash_message', 'ログインしました');
+        return redirect('/');
+    }
+
     public function redirectToProvider(string $provider)
     {
         return Socialite::driver($provider)->redirect();

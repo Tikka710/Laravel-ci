@@ -4,31 +4,40 @@
 
 @section('content')
 　@include('nav')
-<div class="container">
- <div class="d-flex flex-column">
-   <div class="text-center">
-      <button type="button" class="btn btn-warning btn-rounded">
-        <a href="{{ route('articles.about') }}">ザツバコとは</a>
-      </button>
-  </div>
-  <hr>
-   <div class="text-center p-2 bd-highlight">
-     <h3>新着雑学</h3>
-   </div>
-   <div class="col mx-auto" style="width: 40rem">
-    @foreach($articles as $article)
+<div class="container mt-4">
+  <div class="row d-flex justify-content-center">
+  
+    <div class="row col-md-12">
+      <aside class="col-3 d-none d-md-block">
+        <button type="button" class="btn btn-warning btn-rounded">
+          <a href="{{ route('articles.about') }}">ザツバコとは</a>
+        </button>
+        @include('sidebar.list')
+      </aside>
+      <div class="col-md-7">
+        <div class="text-center p-2 bd-highlight">
+          <h3>新着雑学</h3>
+          @include('articles.new_post_btn')
+        </div>
+        
+        <div class="col mx-auto" style="width: 40rem">
+          @foreach($articles as $article)
+      
+          @include('articles.card')
+          @endforeach
+ 
+        </div>
+      
+        <div class="text-center p-2">
+          
+        </div>
+      </div>
+      
 
-
-    @include('articles.card')
-    @endforeach
-  </div>
-
-    <div class="mx-auto p-2">
-      {{ $articles->links() }}
     </div>
-
- </div>
+  </div>
 </div>
+
 @include('footer')
 
 @endsection

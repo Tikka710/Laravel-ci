@@ -38,12 +38,6 @@ class="fas fa-bars fa-1x"></i></span></button>
      </li>
      @endguest
 
-     @auth
-     <li class="nav-item">
-       <a class="nav-link text-dark" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
-     </li>
-
-     @endauth
 
 
      @auth

@@ -12,7 +12,8 @@ class ArticleControllerTest extends TestCase
   use RefreshDatabase;
 
     public function testIndex()
-    {
+    {   
+        $this->withoutExceptionHandling();
         $response = $this->get(route('articles.index'));
 
         $response->assertStatus(200)
