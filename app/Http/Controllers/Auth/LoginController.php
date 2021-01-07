@@ -44,7 +44,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request)
     {
         // フラッシュメッセージを表示
-        session()->flash('flash_message', 'ログインしました');
+        session()->flash('msg_success', 'ログインしました');
         return redirect('/');
     }
 
