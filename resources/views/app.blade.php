@@ -22,9 +22,11 @@
   </div>
 
 
-  <script src="{{ mix('js/app.js') }}"></script> {{--この行を追加--}}
+  
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
@@ -34,13 +36,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+  <script src="{{ mix('js/app.js') }}"></script> {{--この行を追加--}}
+
   <script>
-    // 成功時
     @if (session('msg_success'))
         $(function () {
             toastr.success('{{ session('msg_success') }}');
         });
-    // 失敗時
     @elseif (session('msg_error'))
       $(function () {
             toastr.error('{{ session('msg_error') }}');
