@@ -36,6 +36,10 @@ return [
        'redirect' => 'https://zatubako.com/login/google/callback',
    ],
 
+   'Twitter' => [
+     ''
+   ]
+
 
 
 ];

@@ -4,6 +4,7 @@
 
 @section('content')
 　@include('nav')
+
 <div class="container mt-4">
   <div class="row d-flex justify-content-center">
   
@@ -27,9 +28,8 @@
           @endforeach
  
         </div>
-      
         <div class="text-center p-2">
-          
+          {{ $articles->links() }}
         </div>
       </div>
       
