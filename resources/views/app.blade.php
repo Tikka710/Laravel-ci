@@ -13,6 +13,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
 </head>
 
@@ -36,7 +38,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-  <script src="{{ mix('js/app.js') }}"></script> {{--この行を追加--}}
+  <script src="{{ mix('js/app.js') }}"></script>
+
+
 
   <script>
     @if (session('msg_success'))

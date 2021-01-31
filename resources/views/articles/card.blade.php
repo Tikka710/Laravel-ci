@@ -1,4 +1,4 @@
-<div class="card mt-3 border-warning" style="max-width">
+<div class="card article-card mt-3 border-warning">
   <div class="card-body card-body-cascade d-flex flex-row">
     <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
      <i class="far fa-user-circle fa-2x mr-1"></i>
@@ -20,7 +20,7 @@
             <i class="fas fa-ellipsis-v"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="{{ route("articles.edit", ['article' => $article]) }}">
+            <a class="dropdown-item text-dark" href="{{ route("articles.edit", ['article' => $article]) }}">
               <i class="fas fa-pen mr-1"></i>記事を更新する
             </a>
             <div class="dropdown-divider"></div>
@@ -66,7 +66,7 @@
          {{ $article->title }}
        </a>
      </h3>
-     <div class="card-text">
+     <div class="card-text text-body">
       {!! nl2br(e( $article->body )) !!}
     </div>
    </div>
