@@ -5,14 +5,14 @@
             \App\Tag::where('name', '生き物')->first()
             ? route('tags.show', ['name' => '生き物'])
             : ''
-        }}">
+        }}" class="link-dark">
             <p>#生き物</p>
       </a>
       <a href="{{
             \App\Tag::where('name', '宇宙')->first()
             ? route('tags.show', ['name' => '宇宙'])
             : ''
-        }}">
+        }}" class="link-dark">
             <p>#宇宙</p>
         </a>
         <a href="{{

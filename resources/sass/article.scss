@@ -1,0 +1,12 @@
+@import "component.scss";
+
+.new-article-btn {
+  @include new-post-btn (60px);
+}
+
+.article-card {
+  position: relative;
+}
+
+
+

@@ -9,33 +9,40 @@
   <div class="row d-flex justify-content-center">
   
     <div class="row col-md-12">
-      <aside class="col-3 d-none d-md-block">
+      <aside class="col-3 d-none d-md-block position-fixed">
         <button type="button" class="btn btn-warning btn-rounded">
-          <a href="{{ route('articles.about') }}">ザツバコとは</a>
+          <a class="link-dark" href="{{ route('articles.about') }}">ザツバコとは</a>
         </button>
+        
         @include('sidebar.list')
       </aside>
-      <div class="col-md-7">
+      <main class="col-md-7 offset-md-5">
+        
         <div class="text-center p-2 bd-highlight">
-          <h3>新着雑学</h3>
-          @include('articles.new_post_btn')
+          <h3 class="text-dark">新着雑学</h3>
+          
         </div>
         
-        <div class="col mx-auto" style="width: 40rem">
+        <div class="col">
           @foreach($articles as $article)
       
           @include('articles.card')
           @endforeach
- 
+         
         </div>
+        
         <div class="text-center p-2">
           {{ $articles->links() }}
         </div>
-      </div>
-      
 
+        @include('articles.new_post_btn')
+      </main>
+      
+      
     </div>
+    
   </div>
+  
 </div>
 
 @include('footer')

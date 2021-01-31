@@ -5,9 +5,9 @@
  </a>
 
 <ul class="navbar-nav ml-auto">
-
+  
  @include('form')
-
+ 
 </ul>
 <!-- Hunberger -->
 
@@ -43,6 +43,7 @@ class="fas fa-bars fa-1x"></i></span></button>
      @auth
      <!-- Dropdown -->
      <li class="nav-item dropdown">
+      
        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
          <i class="fas fa-user-circle"></i>
