@@ -1,13 +1,15 @@
-<nav class="navbar navbar-light navbar-dark orange lighten-4">
+<!-- ハンバーガーメニューボタン -->
+<section class="hamburger d-md-none">
+  <a href="#" class="nav-button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+</section>
 
- <a class="navbar-brand" href="/"><img src="{{ secure_asset('/images/zatu.png') }}" class="logo mr-1" width="100" height="50">
-   <p class="float-right text-muted h6 mt-3">知識が集まる場所</p>
- </a>
- @include('hamburger_menu')
- 
-
-    <ul class="navbar-nav ml-auto d-none d-md-flex align-items-center">
-
+<!-- ハンバーガーメニューのモダル -->
+<nav class="menu-area navbar-dark orange lighten-4 d-md-none">
+  <ul class="nav-modal mb-0 text-center">
     @guest
     <li class="nav-item">
       <a class="nav-link text-dark" href="{{ route('register') }}">ユーザー登録</a>
@@ -52,8 +54,6 @@
      </form>
      <!-- Dropdown -->
      @endauth
+  </ul>
 
-   </ul>
-  <!-- Hunberger -->
-
-  </nav>
+</nav>

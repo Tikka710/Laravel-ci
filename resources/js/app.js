@@ -1,5 +1,6 @@
 import './bootstrap'
 import './ToastrOption'
+import './hamburgerMenu'
 import Vue from 'vue'
 import ArticleLike from './components/ArticleLike'
 import ArticleTagsInput from './components/ArticleTagsInput'
