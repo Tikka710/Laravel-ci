@@ -17,7 +17,7 @@
         @include('sidebar.list')
       </aside>
       <main class="col-md-7 offset-md-5">
-        
+        @include('form')
         <div class="text-center p-2 bd-highlight">
           <h3 class="text-dark">新着雑学</h3>
           
@@ -31,7 +31,7 @@
          
         </div>
         
-        <div class="text-center p-2">
+        <div class="text-center p-5">
           {{ $articles->links() }}
         </div>
 
